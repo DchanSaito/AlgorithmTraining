@@ -13,35 +13,47 @@
 //
 
 // 評価値関数
-function fitness(gene, costsOfItems, valuesOfItems, totalCapacity) {
-  var sumOfCosts = 0;
-  var sumOfValues = 0;
+function fitness(population, costsOfItems, valuesOfItems, totalCapacity) {
+  var allFitnessOfAllGene = new Array(population.length);
 
-  for (var i in gene) {
-    sumOfCosts += gene[i] * costsOfItems[i];
-    sumOfCosts += gene[i] * valuesOfItems[i];
-  }
-
-  return (sumOfCosts < totalCapacity) ? sumOfValues : 0;
+  population.forEach(function (gene, index, array) {
+    var sumOfCosts = 0;
+    var sumOfValues = 0;
+    for (var i in gene) {
+      sumOfCosts += gene[i] * costsOfItems[i];
+      sumOfValues += gene[i] * valuesOfItems[i];
+    }
+    console.log('合計費用'+sumOfCosts);
+    console.log((sumOfCosts <= totalCapacity) ? sumOfValues : 0);
+    allFitnessOfAllGene[index] = (sumOfCosts <= totalCapacity) ? sumOfValues : 0
+  });
+  return allFitnessOfAllGene;
 }
 
 // 初期個体生成
-function initGene(ITEMS) {
-  var genes = new Array(ITEMS);
+function initPoplation(ITEMS) {
+  var poplation = new Array(ITEMS);
   for (var i=0; i < ITEMS; i++) {
     var gene = new Array(ITEMS);
     for (var j = 0; j < ITEMS; j++) {
       gene[j] = Math.floor(Math.random() * 2);
     }
-    genes[i] = gene;
+    poplation[i] = gene;
   }
-  return genes;
+  return poplation;
+}
+
+// エリート保存
+function eliteSave(fitnessInGene) {
+  var sortFitness = [].concat(fitnessInGene).sort(function(a, b) {return b - a;});
+  var maxFitness = sortFitness[0];
+  console.log('エリートやで〜',maxFitness);
 }
 
 var ITEMS = 20;
 var costsOfItems = new Array(ITEMS);
 var valuesOfItems = new Array(ITEMS);
-var totalCapacity = 30;
+var totalCapacity = 50;
 var elite = null;
 // とりあえずランダムに作ります
 for(var i=0;i<ITEMS;i++){
@@ -50,5 +62,7 @@ for(var i=0;i<ITEMS;i++){
 };
 console.log('容量: ',costsOfItems); 
 console.log('価値: ',valuesOfItems); 
-var genes = initGene(ITEMS);
-console.log(genes);
+var poplation = initPoplation(ITEMS);
+console.log(poplation);
+var allFitnessOfAllGene = fitness(poplation, costsOfItems, valuesOfItems, totalCapacity);
+eliteSave(allFitnessOfAllGene);
