@@ -25,6 +25,19 @@ function fitness(gene, costsOfItems, valuesOfItems, totalCapacity) {
   return (sumOfCosts < totalCapacity) ? sumOfValues : 0;
 }
 
+// 初期個体生成
+function initGene(ITEMS) {
+  var genes = new Array(ITEMS);
+  for (var i=0; i < ITEMS; i++) {
+    var gene = new Array(ITEMS);
+    for (var j = 0; j < ITEMS; j++) {
+      gene[j] = Math.floor(Math.random() * 2);
+    }
+    genes[i] = gene;
+  }
+  return genes;
+}
+
 var ITEMS = 20;
 var costsOfItems = new Array(ITEMS);
 var valuesOfItems = new Array(ITEMS);
@@ -37,3 +50,5 @@ for(var i=0;i<ITEMS;i++){
 };
 console.log('容量: ',costsOfItems); 
 console.log('価値: ',valuesOfItems); 
+var genes = initGene(ITEMS);
+console.log(genes);
