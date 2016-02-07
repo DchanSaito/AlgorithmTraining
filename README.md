@@ -7,6 +7,9 @@ Update Algorithms on every week(maybe update in saturday or sanday).
 ###Knapsack problem
 Genetic algorithm(making).  
 
+###DevideTriangle
+Dynaminc Programming(Hexagon).
+
 ##Author
 Copyright D. Saito.  
 I allow anyone to use these programs.  
