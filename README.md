@@ -10,4 +10,4 @@ Genetic algorithm(making).
 ##Author
 Copyright D. Saito.  
 I allow anyone to use these programs.  
-But I will not bear full responsibility for that.
+But I will not bear full responsibility for these programs.
