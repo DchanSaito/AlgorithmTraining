@@ -1,7 +1,9 @@
 # AlgorithmTraining
 Practice to implement algorithm.
 
-##Knapsack problem
-Genetic algorithm
+##Problem and Algorithm
+###Knapsack problem
+Genetic algorithm(making).  
 
-Copyright D. Saito
+##Author
+Copyright D. Saito.
