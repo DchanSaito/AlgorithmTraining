@@ -5,10 +5,14 @@ Update Algorithms on every week(maybe update in saturday or sanday).
 ##Problem and Algorithm
 
 ###Knapsack problem
-Genetic algorithm(making).  
+- Genetic algorithm(making).  
 
 ###DevideTriangle
-Dynaminc Programming(Hexagon).
+- Dynaminc Programming(Hexagon).
+
+###Sort algorithm
+- buble
+- insert
 
 ##Author
 Copyright D. Saito.  
