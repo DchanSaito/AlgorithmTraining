@@ -11,8 +11,8 @@ Update Algorithms on every week(maybe update in saturday or sanday).
 - Dynaminc Programming(Hexagon).
 
 ###Sort algorithm
-- buble
-- insert
+- Buble
+- Insert
 
 ##Author
 Copyright D. Saito.  
