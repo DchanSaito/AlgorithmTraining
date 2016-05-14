@@ -4,7 +4,7 @@
     Golangのインスコ(mac)
       brew install go
     プログラム実行方法
-      go run bublesort.go
+      go run bubblesort.go
 */
 package main
 

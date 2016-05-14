@@ -11,7 +11,7 @@ Update Algorithms on every week(maybe update in saturday or sanday).
 - Dynaminc Programming(Hexagon).
 
 ###Sort algorithm
-- Buble.
+- Bubble.
 - Insert.
 
 ##Author
